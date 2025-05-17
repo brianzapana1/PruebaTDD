@@ -21,6 +21,23 @@ public class TresEnRayaTest {
         juego.colocarFicha(1, 1); // +
         assertEquals('X', juego.obtenerJugadorActual());
     }
+    
+    @Test
+    public void fueraDelEjeXDebeLanzarExcepcion() {
+        TresEnRaya juego = new TresEnRaya();
+        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(5, 1));
+    }
 
-
+    @Test
+    public void fueraDelEjeYDebeLanzarExcepcion() {
+        TresEnRaya juego = new TresEnRaya();
+        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, -1));
+    }
+    
+    @Test
+    public void lugarOcupadoDebeLanzarExcepcion() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0);
+        assertThrows(IllegalStateException.class, () -> juego.colocarFicha(0, 0));
+    }
 }
