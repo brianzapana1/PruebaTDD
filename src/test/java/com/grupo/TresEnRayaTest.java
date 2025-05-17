@@ -8,7 +8,8 @@ public class TresEnRayaTest {
 
     @Test
     public void primerTurnoDebeSerX() {
-
+        TresEnRaya juego = new TresEnRaya();
+        assertEquals('X', juego.obtenerJugadorActual());
     }
 
 }
