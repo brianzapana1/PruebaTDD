@@ -21,6 +21,10 @@ public class TresEnRayaTest {
         juego.colocarFicha(1, 1); // +
         assertEquals('X', juego.obtenerJugadorActual());
     }
+    
+    @Test
+    public void fueraDelEjeXDebeLanzarExcepcion() {
+        TresEnRaya juego = new TresEnRaya();
 
 
 }
