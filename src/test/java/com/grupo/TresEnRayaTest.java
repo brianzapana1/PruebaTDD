@@ -16,7 +16,8 @@ public class TresEnRayaTest {
     public void turnoDebeAlternarEntreXyMas() {
         TresEnRaya juego = new TresEnRaya();
         juego.colocarFicha(0, 0); // X
-  
+        assertEquals('+', juego.obtenerJugadorActual());
+
     }
 
 
