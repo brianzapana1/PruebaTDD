@@ -14,7 +14,9 @@ public class TresEnRayaTest {
 
     @Test
     public void turnoDebeAlternarEntreXyMas() {
-
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0); // X
+  
     }
 
 
