@@ -6,5 +6,21 @@ import org.junit.jupiter.api.Test;
 
 public class TresEnRayaTest {
 
-   
+    @Test
+    public void primerTurnoDebeSerX() {
+        TresEnRaya juego = new TresEnRaya();
+        assertEquals('X', juego.obtenerJugadorActual());
+    }
+
+    @Test
+    public void turnoDebeAlternarEntreXyMas() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0); // X
+        assertEquals('+', juego.obtenerJugadorActual());
+
+        juego.colocarFicha(1, 1); // +
+        assertEquals('X', juego.obtenerJugadorActual());
+    }
+
+
 }
