@@ -25,4 +25,8 @@ public class TresEnRaya {
     tablero[fila][columna] = jugadorActual;
     jugadorActual = (jugadorActual == 'X') ? '+' : 'X';
     }
+
+    public char[][] obtenerTablero() {
+    return tablero;
+    }
 }
