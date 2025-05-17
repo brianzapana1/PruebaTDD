@@ -12,4 +12,10 @@ public class TresEnRayaTest {
         assertEquals('X', juego.obtenerJugadorActual());
     }
 
+    @Test
+    public void turnoDebeAlternarEntreXyMas() {
+
+    }
+
+
 }
