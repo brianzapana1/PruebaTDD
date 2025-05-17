@@ -28,4 +28,7 @@ public class TresEnRayaTest {
         assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(5, 1));
     }
 
+    @Test
+    public void fueraDelEjeYDebeLanzarExcepcion() {
+        TresEnRaya juego = new TresEnRaya();
 }
