@@ -33,4 +33,8 @@ public class TresEnRayaTest {
         TresEnRaya juego = new TresEnRaya();
         assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, -1));
     }
+    
+    @Test
+    public void lugarOcupadoDebeLanzarExcepcion() {
+        TresEnRaya juego = new TresEnRaya();
 }
