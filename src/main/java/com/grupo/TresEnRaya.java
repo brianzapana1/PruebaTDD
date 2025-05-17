@@ -14,4 +14,10 @@ public class TresEnRaya {
         return jugadorActual;
     }
 
+    public void colocarFicha(int fila, int columna) {
+    if (fila < 0 || fila > 2)
+        throw new IllegalArgumentException("Fila fuera de rango");
+    if (columna < 0 || columna > 2)
+        throw new IllegalArgumentException("Columna fuera de rango");
+    }
 }
