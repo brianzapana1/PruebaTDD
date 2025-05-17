@@ -31,4 +31,6 @@ public class TresEnRayaTest {
     @Test
     public void fueraDelEjeYDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
+        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, -1));
+    }
 }
