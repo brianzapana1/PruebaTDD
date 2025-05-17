@@ -6,5 +6,9 @@ import org.junit.jupiter.api.Test;
 
 public class TresEnRayaTest {
 
-   
+    @Test
+    public void primerTurnoDebeSerX() {
+
+    }
+
 }
