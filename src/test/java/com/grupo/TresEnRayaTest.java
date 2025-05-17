@@ -18,6 +18,8 @@ public class TresEnRayaTest {
         juego.colocarFicha(0, 0); // X
         assertEquals('+', juego.obtenerJugadorActual());
 
+        juego.colocarFicha(1, 1); // +
+        assertEquals('X', juego.obtenerJugadorActual());
     }
 
 
