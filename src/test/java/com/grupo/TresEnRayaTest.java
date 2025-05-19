@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class TresEnRayaTest {
-
+//test primera funcion
     @Test
     public void primerTurnoDebeSerX() {
         TresEnRaya juego = new TresEnRaya();
