@@ -19,8 +19,8 @@ public class TresEnRayaTest {
         juego.colocarFicha(0, 0); // Jugador 'X' coloca su ficha en la posición (0,0)
         assertEquals('+', juego.obtenerJugadorActual()); // Se espera que el siguiente turno sea del jugador '+'
 
-        juego.colocarFicha(1, 1); 
-        assertEquals('X', juego.obtenerJugadorActual()); 
+        juego.colocarFicha(1, 1); // Jugador '+' coloca su ficha en la posición (1,1)
+        assertEquals('X', juego.obtenerJugadorActual()); // Se espera que el turno vuelva al jugador 'X'
     }
 
 //test tercera funcion
