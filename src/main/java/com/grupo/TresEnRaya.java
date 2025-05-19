@@ -9,7 +9,8 @@ public class TresEnRaya {
             for (int j = 0; j < 3; j++)
                 tablero[i][j] = ' ';
     }
-    
+
+    //funcion para deterctare a jugador actual
     public char obtenerJugadorActual() {
         return jugadorActual;
     }
