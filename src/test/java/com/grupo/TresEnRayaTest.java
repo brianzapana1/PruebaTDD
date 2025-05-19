@@ -29,13 +29,14 @@ public class TresEnRayaTest {
         assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(5, 1));
     }
 
-// test cuarta funcion
+//test cuarta funcion
     @Test
     public void fueraDelEjeYDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
         assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, -1));
     }
-    
+
+//test quinta función
     @Test
     public void lugarOcupadoDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
