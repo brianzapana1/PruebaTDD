@@ -11,7 +11,7 @@ public class TresEnRayaTest {
         TresEnRaya juego = new TresEnRaya();
         assertEquals('X', juego.obtenerJugadorActual());
     }
-
+//test tsegunda funcion
     @Test
     public void turnoDebeAlternarEntreXyMas() {
         TresEnRaya juego = new TresEnRaya();
