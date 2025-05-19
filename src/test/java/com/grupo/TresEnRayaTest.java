@@ -8,8 +8,8 @@ public class TresEnRayaTest {
 //test primera funcion
     @Test
     public void primerTurnoDebeSerX() {
-        TresEnRaya juego = new TresEnRaya();
-        assertEquals('X', juego.obtenerJugadorActual());
+        TresEnRaya juego = new TresEnRaya(); // Se crea una nueva instancia del juego
+        assertEquals('X', juego.obtenerJugadorActual()); // Se espera que el primer jugador sea 'X'
     }
 //test tsegunda funcion
     @Test
