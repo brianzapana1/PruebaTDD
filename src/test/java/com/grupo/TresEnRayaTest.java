@@ -21,13 +21,15 @@ public class TresEnRayaTest {
         juego.colocarFicha(1, 1); // +
         assertEquals('X', juego.obtenerJugadorActual());
     }
-    //test tercera funcion
+
+//test tercera funcion
     @Test
     public void fueraDelEjeXDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
         assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(5, 1));
     }
 
+// test cuarta funcion
     @Test
     public void fueraDelEjeYDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
