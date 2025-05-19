@@ -2,11 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar Repo') {
+        stage('Verificar Código') {
             steps {
-                git 'https://github.com/brianzapana1/PruebaTDD.git'
+                echo 'Código clonado correctamente por Jenkins SCM'
             }
         }
+
 
         stage('Compilar') {
             steps {
