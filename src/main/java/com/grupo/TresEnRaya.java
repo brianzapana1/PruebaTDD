@@ -15,6 +15,7 @@ public class TresEnRaya {
         return jugadorActual;
     }
 
+    //funcion para colocar la ficha
     public void colocarFicha(int fila, int columna) {
     if (fila < 0 || fila > 2)
         throw new IllegalArgumentException("Fila fuera de rango");
