@@ -28,6 +28,7 @@ public class TresEnRaya {
     jugadorActual = (jugadorActual == 'X') ? '+' : 'X';
     }
 
+    //retorno de datos
     public char[][] obtenerTablero() {
     return tablero;
     }
