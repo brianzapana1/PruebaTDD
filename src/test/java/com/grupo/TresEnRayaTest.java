@@ -1,6 +1,7 @@
 package com.grupo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
@@ -53,5 +54,23 @@ public class TresEnRayaTest {
         char[][] tablero = juego.obtenerTablero();
         assertEquals(' ', tablero[0][0]);
     }
+
+    @Test
+    public void tableroEmpatadoNoTieneGanador() {
+        TresEnRaya juego = new TresEnRaya();
+        // X + X
+        juego.colocarFicha(0, 0);
+        juego.colocarFicha(0, 1);
+        juego.colocarFicha(0, 2);
+        juego.colocarFicha(1, 0);
+        juego.colocarFicha(1, 2);
+        juego.colocarFicha(1, 1);
+        juego.colocarFicha(2, 1);
+        juego.colocarFicha(2, 0);
+        juego.colocarFicha(2, 2);
+
+        assertFalse(juego.hayGanador());
+    }
+
 
 }

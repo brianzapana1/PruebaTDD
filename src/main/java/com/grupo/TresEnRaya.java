@@ -37,4 +37,27 @@ public class TresEnRaya {
         jugadorActual = 'X';
     }
 
+    public boolean hayGanador() {
+    // Verificar filas y columnas
+        for (int i = 0; i < 3; i++) {
+            if (tablero[i][0] != ' ' && tablero[i][0] == tablero[i][1] && tablero[i][1] == tablero[i][2]) {
+                return true;
+            }
+            if (tablero[0][i] != ' ' && tablero[0][i] == tablero[1][i] && tablero[1][i] == tablero[2][i]) {
+                return true;
+            }
+        }
+
+        // Verificar diagonales
+        if (tablero[0][0] != ' ' && tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2]) {
+            return true;
+        }
+        if (tablero[0][2] != ' ' && tablero[0][2] == tablero[1][1] && tablero[1][1] == tablero[2][0]) {
+            return true;
+        }
+
+        return false;
+    }
+
+
 }
