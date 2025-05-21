@@ -29,4 +29,12 @@ public class TresEnRaya {
     public char[][] obtenerTablero() {
         return tablero;
     }
+
+    public void reiniciarJuego() {
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+                tablero[i][j] = ' ';
+        jugadorActual = 'X';
+    }
+
 }
