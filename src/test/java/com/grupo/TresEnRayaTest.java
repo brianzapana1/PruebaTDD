@@ -44,4 +44,14 @@ public class TresEnRayaTest {
         juego.colocarFicha(0, 0);
         assertThrows(IllegalStateException.class, () -> juego.colocarFicha(0, 0));
     }
+
+    @Test
+    public void reiniciarDejaTableroVacio() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0);
+        juego.reiniciarJuego();
+        char[][] tablero = juego.obtenerTablero();
+        assertEquals(' ', tablero[0][0]);
+    }
+
 }
