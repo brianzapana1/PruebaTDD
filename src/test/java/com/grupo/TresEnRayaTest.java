@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
+//clase que representa el juego tres en raya
 public class TresEnRayaTest {
 //test primera funcion
     @Test
