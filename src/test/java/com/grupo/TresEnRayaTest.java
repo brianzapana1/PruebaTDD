@@ -72,8 +72,8 @@ public class TresEnRayaTest {
 
         assertFalse(juego.hayGanador());
     }
-    
 
+//método para verificar que este lleno el tablero
     @Test
     public boolean tableroLleno() {
     for (int i = 0; i < 3; i++)
