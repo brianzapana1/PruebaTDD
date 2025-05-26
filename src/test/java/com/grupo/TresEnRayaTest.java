@@ -12,7 +12,7 @@ public class TresEnRayaTest {
     @Test
     public void primerTurnoDebeSerX() {
         TresEnRaya juego = new TresEnRaya(); // Se crea una nueva instancia del juego
-        assertEquals('Y', juego.obtenerJugadorActual()); // Se espera que el primer jugador sea 'X'
+        assertEquals('X', juego.obtenerJugadorActual()); // Se espera que el primer jugador sea 'X'
     }
 //test segunda funcion
     // Verifica que el turno se alterne entre 'X' y '+'
