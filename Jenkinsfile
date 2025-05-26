@@ -30,9 +30,10 @@ pipeline {
         }
 
         stage('Deploy a Tomcat') {
-            steps {
-                bat 'copy target\\tresenraeya-1.0-SNAPSHOT.jar C:\\apache-tomcat-9.0.XX\\webapps\\tresenraya\\WEB-INF\\lib\\'
-            }
+        steps {
+            bat 'copy target\\tresenraeya-1.0-SNAPSHOT.war C:\\apache-tomcat-11.0.7\\webapps\\tresenraya.war'
         }
+        }
+
     }
 }
