@@ -91,6 +91,50 @@ public class TresEnRayaTest {
         assertTrue(juego.tableroLleno());
     }
 
+        @Test
+    public void jugadorGanaPorFila() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0); // X
+        juego.colocarFicha(1, 0); // +
+        juego.colocarFicha(0, 1); // X
+        juego.colocarFicha(1, 1); // +
+        juego.colocarFicha(0, 2); // X
+        assertTrue(juego.hayGanador());
+    }
+
+    @Test
+    public void jugadorGanaPorColumna() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0); // X
+        juego.colocarFicha(0, 1); // +
+        juego.colocarFicha(1, 0); // X
+        juego.colocarFicha(1, 1); // +
+        juego.colocarFicha(2, 0); // X
+        assertTrue(juego.hayGanador());
+    }
+
+    @Test
+    public void jugadorGanaPorDiagonalPrincipal() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0); // X
+        juego.colocarFicha(0, 1); // +
+        juego.colocarFicha(1, 1); // X
+        juego.colocarFicha(1, 2); // +
+        juego.colocarFicha(2, 2); // X
+        assertTrue(juego.hayGanador());
+    }
+
+    @Test
+    public void jugadorGanaPorDiagonalInversa() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 2); // X
+        juego.colocarFicha(0, 1); // +
+        juego.colocarFicha(1, 1); // X
+        juego.colocarFicha(1, 2); // +
+        juego.colocarFicha(2, 0); // X
+        assertTrue(juego.hayGanador());
+    }
+
 
 
 }
