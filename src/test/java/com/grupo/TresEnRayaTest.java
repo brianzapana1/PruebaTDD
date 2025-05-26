@@ -3,6 +3,7 @@ package com.grupo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 //clase que representa el juego tres en raya
@@ -73,13 +74,22 @@ public class TresEnRayaTest {
         assertFalse(juego.hayGanador());
     }
 
-//método para verificar que este lleno el tablero
     @Test
-    public boolean tableroLleno() {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            if (tablero[i][j] == ' ') return false;
-    return true;
+    public void verificarTableroLleno() {
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0);
+        juego.colocarFicha(0, 1);
+        juego.colocarFicha(0, 2);
+        juego.colocarFicha(1, 0);
+        juego.colocarFicha(1, 2);
+        juego.colocarFicha(1, 1);
+        juego.colocarFicha(2, 1);
+        juego.colocarFicha(2, 0);
+        juego.colocarFicha(2, 2);
+
+        assertTrue(juego.tableroLleno());
     }
+
+
 
 }
