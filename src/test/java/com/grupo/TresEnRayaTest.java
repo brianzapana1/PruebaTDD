@@ -130,7 +130,7 @@ public class TresEnRayaTest {
         juego.colocarFicha(0, 2); // X
         juego.colocarFicha(0, 1); // +
         juego.colocarFicha(1, 1); // X
-        juego.colocarFicha(1, 2); // +
+        juego.colocarFicha(1, 1); // +
         juego.colocarFicha(2, 0); // X
         assertTrue(juego.hayGanador());
     }
