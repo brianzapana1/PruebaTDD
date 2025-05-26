@@ -60,32 +60,33 @@ public class TresEnRayaTest {
     @Test
     public void tableroEmpatadoNoTieneGanador() {
         TresEnRaya juego = new TresEnRaya();
-        // X + X
-        juego.colocarFicha(0, 0);
-        juego.colocarFicha(0, 1);
-        juego.colocarFicha(0, 2);
-        juego.colocarFicha(1, 0);
-        juego.colocarFicha(1, 2);
-        juego.colocarFicha(1, 1);
-        juego.colocarFicha(2, 1);
-        juego.colocarFicha(2, 0);
-        juego.colocarFicha(2, 2);
+        juego.colocarFicha(0, 0); // X
+        juego.colocarFicha(0, 1); // +
+        juego.colocarFicha(0, 2); // X
+        juego.colocarFicha(1, 1); // +
+        juego.colocarFicha(1, 0); // X
+        juego.colocarFicha(1, 2); // +
+        juego.colocarFicha(2, 1); // X
+        juego.colocarFicha(2, 0); // +
+        juego.colocarFicha(2, 2); // X
 
-        assertFalse(juego.hayGanador());
+        assertFalse(juego.hayGanador()); // ahora sí debe pasar
     }
+
 
     @Test
     public void verificarTableroLleno() {
         TresEnRaya juego = new TresEnRaya();
-        juego.colocarFicha(0, 0);
-        juego.colocarFicha(0, 1);
-        juego.colocarFicha(0, 2);
-        juego.colocarFicha(1, 0);
-        juego.colocarFicha(1, 2);
-        juego.colocarFicha(1, 1);
-        juego.colocarFicha(2, 1);
-        juego.colocarFicha(2, 0);
-        juego.colocarFicha(2, 2);
+        juego.colocarFicha(0, 0); // X
+        juego.colocarFicha(0, 1); // +
+        juego.colocarFicha(0, 2); // X
+        juego.colocarFicha(1, 1); // +
+        juego.colocarFicha(1, 0); // X
+        juego.colocarFicha(1, 2); // +
+        juego.colocarFicha(2, 1); // X
+        juego.colocarFicha(2, 0); // +
+        juego.colocarFicha(2, 2); // X
+
 
         assertTrue(juego.tableroLleno());
     }
