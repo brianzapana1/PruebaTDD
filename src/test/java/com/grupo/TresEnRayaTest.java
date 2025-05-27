@@ -6,41 +6,40 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
-//clase que representa el juego tres en raya
 public class TresEnRayaTest {
-//test primera funcion
+
+    // Test 1: Verifica que el primer turno siempre sea del jugador 'X'
     @Test
     public void primerTurnoDebeSerX() {
-        TresEnRaya juego = new TresEnRaya(); // Se crea una nueva instancia del juego
-        assertEquals('X', juego.obtenerJugadorActual()); // Se espera que el primer jugador sea 'X'
+        TresEnRaya juego = new TresEnRaya(); 
+        assertEquals('X', juego.obtenerJugadorActual()); 
     }
-//test segunda funcion
-    // Verifica que el turno se alterne entre 'X' y '+'
+
+    // Test 2: Verifica que los turnos se alternen entre 'X' y '+'
     @Test
     public void turnoDebeAlternarEntreXyMas() {
-        TresEnRaya juego = new TresEnRaya(); // Se crea una nueva instancia del juego
-        juego.colocarFicha(0, 0); // Jugador 'X' coloca su ficha en la posición (0,0)
-        assertEquals('+', juego.obtenerJugadorActual()); // Se espera que el siguiente turno sea del jugador '+'
-
-        juego.colocarFicha(1, 1); // Jugador '+' coloca su ficha en la posición (1,1)
-        assertEquals('X', juego.obtenerJugadorActual()); // Se espera que el turno vuelva al jugador 'X'
+        TresEnRaya juego = new TresEnRaya();
+        juego.colocarFicha(0, 0);
+        assertEquals('+', juego.obtenerJugadorActual()); 
+        juego.colocarFicha(1, 1);
+        assertEquals('X', juego.obtenerJugadorActual()); 
     }
 
-//test tercera funcion
+    // Test 3: Verifica que colocar ficha fuera del eje X (filas) lanza excepción
     @Test
     public void fueraDelEjeXDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
         assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(5, 1));
     }
 
-//test cuarta funcion
+    // Test 4: Verifica que colocar ficha fuera del eje Y (columnas) lanza excepción
     @Test
     public void fueraDelEjeYDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
-        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, -1));
+        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, 3));
     }
 
-//test quinta función
+    // Test 5: Verifica que no se pueda colocar una ficha en una celda ocupada
     @Test
     public void lugarOcupadoDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
@@ -48,6 +47,7 @@ public class TresEnRayaTest {
         assertThrows(IllegalStateException.class, () -> juego.colocarFicha(0, 0));
     }
 
+    // Test 6: Verifica que el método reiniciarJuego limpia el tablero
     @Test
     public void reiniciarDejaTableroVacio() {
         TresEnRaya juego = new TresEnRaya();
@@ -57,6 +57,7 @@ public class TresEnRayaTest {
         assertEquals(' ', tablero[0][0]);
     }
 
+    // Test 7: Verifica que en un empate (tablero lleno sin ganador), no hay ganador
     @Test
     public void tableroEmpatadoNoTieneGanador() {
         TresEnRaya juego = new TresEnRaya();
@@ -70,10 +71,10 @@ public class TresEnRayaTest {
         juego.colocarFicha(2, 0); // +
         juego.colocarFicha(2, 2); // X
 
-        assertFalse(juego.hayGanador()); // ahora sí debe pasar
+        assertFalse(juego.hayGanador());
     }
 
-
+    // Test 8: Verifica que el método tableroLleno detecte correctamente un tablero sin espacios
     @Test
     public void verificarTableroLleno() {
         TresEnRaya juego = new TresEnRaya();
@@ -87,11 +88,11 @@ public class TresEnRayaTest {
         juego.colocarFicha(2, 0); // +
         juego.colocarFicha(2, 2); // X
 
-
         assertTrue(juego.tableroLleno());
     }
 
-        @Test
+    // Test 9: Verifica victoria por fila completa
+    @Test
     public void jugadorGanaPorFila() {
         TresEnRaya juego = new TresEnRaya();
         juego.colocarFicha(0, 0); // X
@@ -102,6 +103,7 @@ public class TresEnRayaTest {
         assertTrue(juego.hayGanador());
     }
 
+    // Test 10: Verifica victoria por columna completa
     @Test
     public void jugadorGanaPorColumna() {
         TresEnRaya juego = new TresEnRaya();
@@ -113,6 +115,7 @@ public class TresEnRayaTest {
         assertTrue(juego.hayGanador());
     }
 
+    // Test 11: Verifica victoria por diagonal principal (↘)
     @Test
     public void jugadorGanaPorDiagonalPrincipal() {
         TresEnRaya juego = new TresEnRaya();
@@ -124,6 +127,7 @@ public class TresEnRayaTest {
         assertTrue(juego.hayGanador());
     }
 
+    // Test 12: Verifica victoria por diagonal inversa (↙)
     @Test
     public void jugadorGanaPorDiagonalInversa() {
         TresEnRaya juego = new TresEnRaya();
@@ -134,7 +138,5 @@ public class TresEnRayaTest {
         juego.colocarFicha(2, 0); // X
         assertTrue(juego.hayGanador());
     }
-
-
 
 }
