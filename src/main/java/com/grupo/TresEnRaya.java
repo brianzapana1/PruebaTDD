@@ -16,7 +16,7 @@ public class TresEnRaya {
     public void colocarFicha(int fila, int columna) {
         if (fila < 0 || fila > 2)
             throw new IllegalArgumentException("Fila fuera de rango");
-        if (columna < 0 || columna > 2)
+        if (columna < 0 || columna > 4)
             throw new IllegalArgumentException("Columna fuera de rango");
         if (tablero[fila][columna] != ' ')
             throw new IllegalStateException("La casilla [" + fila + "," + columna + "] ya está ocupada");
