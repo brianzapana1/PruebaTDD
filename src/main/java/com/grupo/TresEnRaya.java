@@ -48,7 +48,7 @@ public boolean hayGanador() {
     }
     // diagonales
     if (tablero[0][0] != ' ' && tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2])
-        return true;
+        return false;
 
     if (tablero[0][2] != ' ' && tablero[0][2] == tablero[1][1] && tablero[1][1] == tablero[2][0])
         return true;
