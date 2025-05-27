@@ -36,7 +36,7 @@ public class TresEnRayaTest {
     @Test
     public void fueraDelEjeYDebeLanzarExcepcion() {
         TresEnRaya juego = new TresEnRaya();
-        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(1, 3));
+        assertThrows(IllegalArgumentException.class, () -> juego.colocarFicha(-1, -1));
     }
 
     // Test 5: Verifica que no se pueda colocar una ficha en una celda ocupada
