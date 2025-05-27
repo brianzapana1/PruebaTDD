@@ -64,7 +64,7 @@ public class TresEnRayaTest {
         juego.colocarFicha(0, 0); // X
         juego.colocarFicha(0, 1); // +
         juego.colocarFicha(0, 2); // X
-        juego.colocarFicha(1, 6); // +
+        juego.colocarFicha(1, 1); // +
         juego.colocarFicha(1, 0); // X
         juego.colocarFicha(1, 2); // +
         juego.colocarFicha(2, 1); // X
